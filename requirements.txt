@@ -1,0 +1,14 @@
+# Python deps for the LLM-training study repo.
+#
+# torch is intentionally NOT pinned here — it's installed per-machine so each
+# environment gets the right CPU/CUDA build:
+#   Mac / CPU:            pip install torch
+#   RTX 5090 (CUDA 12.8): pip install torch --index-url https://download.pytorch.org/whl/cu128
+
+numpy
+matplotlib
+jupyter
+tiktoken
+datasets
+transformers
+wandb
