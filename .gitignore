@@ -26,8 +26,11 @@ env/
 # --- project-specific ---
 data/
 checkpoints/
-vendor/
 wandb/
+
+# Cloned reference repos — ignore the clones, keep the README note
+vendor/*
+!vendor/README.md
 
 # Model weights / large artifacts
 *.pt
