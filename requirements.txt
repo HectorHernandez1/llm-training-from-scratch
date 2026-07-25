@@ -7,8 +7,10 @@
 
 numpy
 matplotlib
+graphviz  # also needs the system binary: brew install graphviz / apt install graphviz
 jupyter
 tiktoken
 datasets
 transformers
 wandb
+psutil  # used by scripts/env-check.py for RAM reporting
