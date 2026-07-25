@@ -7,7 +7,7 @@ environments (CPU laptop, rented GPUs, and a local RTX 5090). The full curriculu
 lives in **[PLAN.md](PLAN.md)**.
 
 ## Hardware I'm running on
-- **Weeks 1–2** — 2020 Intel MacBook, CPU only (or free Colab)
+- **Weeks 1–2** — Apple Silicon MacBook (10-core, 24 GB RAM, MPS available) or free Colab
 - **Weeks 3–4** — rented RunPod GPUs (RTX 4090 ~$0.50/hr, occasionally an A100 80GB)
 - **After** — my own box: RTX 5090, Ubuntu 24.04, CUDA 12.8
 
