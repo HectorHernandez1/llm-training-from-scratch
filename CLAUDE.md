@@ -27,18 +27,38 @@ pip install -r requirements.txt
 pip install torch               # Mac/CPU — torch is deliberately NOT in requirements.txt
 # pip install torch --index-url https://download.pytorch.org/whl/cu128  # CUDA 12.8
 bash runpod/setup.sh            # fresh RunPod pod: deps + torch + vendor clones + wandb + env check (idempotent)
+bash scripts/setup-local.sh     # Mac OR 5090 — detects the machine, installs matching torch (idempotent)
+python scripts/gpu-smoke-test.py  # does it actually train? sm_120/bf16/compile on CUDA, MPS checks on Mac
 jupyter lab                     # notebooks live in the weekN-*/ dirs
 ```
+
+Both machines use the same conda env name, `llm-training`, on the same Python
+3.12 (one version back, because Week 4's bitsandbytes/peft/trl/unsloth stack
+trails 3.13 — and matching versions keep the notebook kernel consistent across
+the sync). Activate it before doing anything: `conda activate llm-training`.
+
+**Notebooks sync across machines**, so they're set up to merge cell-wise with
+nbdime (`.gitattributes` + a driver enabled by `setup-local.sh`). Outputs are
+committed deliberately — the plots and diagrams are the point. Never "fix" a
+notebook conflict by hand-editing the JSON; use `nbdiff` / `nbmerge`.
 
 Never pin or add `torch` to requirements.txt — it is installed per-machine so
 each environment (Mac CPU, RunPod CUDA 12.x, RTX 5090/CUDA 12.8) gets the right build.
 
-## Three hardware environments
+## Hardware environments
 
-Weeks 1–2 run on a 2020 Intel MacBook (CPU only); weeks 3–4 on rented RunPod
-GPUs; afterwards on a local RTX 5090 (Ubuntu 24.04, CUDA 12.8). Anything that
-must work everywhere (scripts, setup) should degrade gracefully without CUDA —
-see `scripts/env-check.py` for the pattern.
+The user works on **two machines and syncs through this repo**, so anything you
+add must run on both:
+
+- **Apple Silicon MacBook** (MPS) — notes and the Week 1–2 code-alongs
+- **RTX 5090** (Ubuntu 24.04, CUDA 12.8, `sm_120`) — the actual training runs
+
+Plus **rented RunPod GPUs** for weeks 3–4 overflow (`runpod/setup.sh`).
+
+Scripts must degrade gracefully across all of them — no assuming CUDA, and no
+assuming MPS either. See `scripts/env-check.py` and `scripts/gpu-smoke-test.py`
+for the pattern (try/except around `import torch`, branch on
+`cuda.is_available()` / `backends.mps.is_available()`, fall through to CPU).
 
 ## Layout and conventions
 

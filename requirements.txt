@@ -14,3 +14,4 @@ datasets
 transformers
 wandb
 psutil  # used by scripts/env-check.py for RAM reporting
+nbdime  # cell-wise notebook merges — notebooks get edited on both machines

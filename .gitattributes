@@ -1,0 +1,12 @@
+# Notebooks are edited on both the Mac and the 5090 box. A plain text merge
+# mangles them: every re-run bumps execution counts and rewrites output blobs,
+# so git reports a conflict on cells that didn't meaningfully change.
+#
+# nbdime merges them cell-wise instead. This file makes the *mapping* travel
+# with the repo; the driver itself is machine-local, so each machine also needs
+# a one-time `nbdime config-git --enable` (scripts/setup-local.sh does it).
+# Without that setup git just falls back to the normal merge — no error.
+*.ipynb  merge=jupyternotebook  diff=jupyternotebook
+
+# Keep notebooks out of GitHub's language stats — this is a notes repo.
+*.ipynb  linguist-documentation

@@ -91,7 +91,9 @@ Hardware deep-dive:
 - [ ] SemiAnalysis (industry/silicon side): https://semianalysis.com
 
 ## After: 5090 projects
-- [ ] Clone this repo onto the 5090 box, run scripts/env-check.py
+- [x] Clone this repo onto the 5090 box, run scripts/env-check.py
+      (env: `conda activate llm-training`, bootstrap: `bash scripts/setup-local.sh`,
+      verify: `python scripts/gpu-smoke-test.py`)
 - [ ] Longer GPT-2 pretraining run (multi-day, free since I own the card)
 - [ ] LoRA fine-tune on my own data
 - [ ] Benchmark 5090 vs rented 4090/A100 — tokens/sec, max batch size, VRAM headroom
