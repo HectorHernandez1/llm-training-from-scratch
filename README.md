@@ -94,6 +94,18 @@ data/               # datasets (gitignored)
 checkpoints/        # model weights (gitignored)
 ```
 
+## License and credits
+MIT — see [LICENSE](LICENSE). The notes and code-alongs are my own work, but the
+curriculum they follow is **Andrej Karpathy's
+[Neural Networks: Zero to Hero](https://karpathy.ai/zero-to-hero.html)**, and the
+reference implementations I type along with are his (micrograd, makemore,
+nanoGPT, build-nanogpt, ng-video-lecture — all MIT, listed in
+[vendor/README.md](vendor/README.md)). Those repos are cloned locally and
+gitignored, so none of his code is redistributed here.
+
+This is a learning journal, not a library — if something in it is useful to you,
+take it, but expect notes-in-progress rather than polished material.
+
 ## Run log
 The important part — one entry per training run so I can look back and see what I
 actually did, what it cost, and what I learned. Template:

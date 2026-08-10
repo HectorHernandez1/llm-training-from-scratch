@@ -2,9 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Note: a CLAUDE.md from the parent directory (`~/Desktop/repo/CLAUDE.md`,
-describing the CADENCE training-tracker app) may also appear in context. It is a
-different project — none of its instructions apply to this repo.
+Note: this repo lives alongside others in a shared parent directory, so a
+CLAUDE.md from that parent may also appear in context. It belongs to a different
+project — none of its instructions apply here.
 
 ## What this repo is
 
