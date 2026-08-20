@@ -3,7 +3,7 @@
 > Maps to: Video 1 — The spelled-out intro to neural networks and backpropagation:
 > building micrograd. Repo: https://github.com/karpathy/micrograd
 
-**▶ Resume at:** Video 1 @ 1:55:00 (paused 2026-08-17) — `Neuron`/`Layer`/`MLP` classes built; PyTorch grad check matches the hand-built engine; toy dataset (`xs`/`ys`) added and first forward pass over all 4 examples (`ypred`) run. Next up: fill in the `parameters()` methods, build the MSE loss, then the training loop (zero grads each step!). Type-along notebook: [`week1-micrograd/micrograd.ipynb`](../week1-micrograd/micrograd.ipynb).
+**▶ Resume at:** Video 1 — **done** (finished 2026-08-20). Training loop built (zero grads → `backward()` → `p.data += -lr * p.grad`), loss drops over 20 steps and `ypred` matches `ys`. Also ran the `make_moons` demo from `vendor/micrograd/demo.ipynb` (needed `scikit-learn`, now in requirements.txt). Next: Video 2 (makemore) → `notes/02-makemore.md`. Type-along notebook: [`week1-micrograd/micrograd.ipynb`](../week1-micrograd/micrograd.ipynb).
 
 ## Key concepts
 

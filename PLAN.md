@@ -8,12 +8,12 @@ Hardware: Mac (CPU) or free Colab
 Watch (Karpathy: Neural Networks Zero to Hero):
 - [ ] Course homepage: https://karpathy.ai/zero-to-hero.html
 - [ ] Playlist: https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ
-- [ ] Video 1 — The spelled-out intro to neural networks and backpropagation: building micrograd (~2.5 hr)
+- [x] Video 1 — The spelled-out intro to neural networks and backpropagation: building micrograd (~2.5 hr)
 - [ ] Video 2 — The spelled-out intro to language modeling: building makemore (~2 hr)
 - [ ] Video 3 — Building makemore Part 2: MLP (~1.5 hr)
 
 Code along:
-- [ ] micrograd: https://github.com/karpathy/micrograd
+- [x] micrograd: https://github.com/karpathy/micrograd
 - [ ] makemore: https://github.com/karpathy/makemore
 - [ ] Do the exercises in each video description
 
